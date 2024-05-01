@@ -24,7 +24,6 @@ export default function RegistroReparaciones() {
 
             await vehiculoService.RegistroReparaciones(reparacion);
 
-            // Restablecer los campos del formulario después de enviar la reparación
             setPatente("");
             setReparaciones("");
             setMontoTotal(0);
