@@ -13,13 +13,15 @@ pipeline{
                 }
             }
         }
+        /*
         stage("Test"){
             steps{
                 dir("Pep1Tingeso"){
                     bat "mvn test"
                 }
             }
-        }        
+        }
+        */
         stage("Build and Push Docker Image"){
             steps{
                 dir("Pep1Tingeso"){

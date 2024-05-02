@@ -31,7 +31,7 @@ public class ReporteUnoController {
     }
 
 
-    @GetMapping("/calcularReporteuno/{patenteauto]")
+    @GetMapping("/calcularReporteuno/{patenteauto}")
     public ResponseEntity<ReporteUnoEntity> calcularReporteUno(@PathVariable String patenteauto){
         ReporteUnoEntity reporteuno = reporteUnoService.calcularReporteUno(patenteauto);
         return ResponseEntity.ok(reporteuno);
