@@ -36,7 +36,6 @@ public class ReporteUnoService {
     public int CosteReparacion(String motor, List<Integer> reparaciones) {
         int largo = reparaciones.size();
         int valorTotal = 0;
-        for (int i=0; i < largo; i++){
             if (reparaciones.contains(1)){ //contains revisa si existe ese numero
                 if (motor.equals("gasolina")){
                     valorTotal = valorTotal + 120000;
@@ -196,7 +195,6 @@ public class ReporteUnoService {
                     valorTotal = valorTotal + 80000;
                 }
             }
-        }
         return valorTotal;
     }
 
