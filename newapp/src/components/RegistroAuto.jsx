@@ -46,6 +46,7 @@ export default function saveVehiculo() {
     return (
         <div className="container">
           <h1 className="mb-4">Registrar Vehiculo</h1>
+          <h1 className="mb-4">Registrar Vehiculo 2</h1>
           <form className="border row g-3 px-4" onSubmit={handleCrearVehiculo}>
     
             <div className="col-md-6 mr-md-3">
