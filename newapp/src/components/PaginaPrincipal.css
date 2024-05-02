@@ -1,0 +1,57 @@
+.pagina-principal {
+  margin: 20px;
+  background-color: #f8f9fa; 
+  padding: 20px;
+}
+
+h1 {
+  color: #333; 
+  font-size: 28px; 
+  margin-bottom: 30px; 
+}
+
+.acciones-menu {
+  margin-bottom: 30px;
+}
+
+.btn-accion {
+  margin-bottom: 10px; 
+  padding: 12px 24px; 
+  background-color: transparent;
+  color: #007bff; 
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: block; 
+  width: 100%; 
+  text-align: center; 
+}
+
+.btn-accion:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.reportes-menu {
+  margin-bottom: 30px;
+}
+
+.btn-reporte {
+  margin-bottom: 10px; 
+  padding: 12px 24px; 
+  background-color: transparent;
+  color: #28a745; 
+  border: 2px solid #28a745;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: block; 
+  width: 100%; 
+  text-align: center; 
+}
+
+.btn-reporte:hover {
+  background-color: #28a745;
+  color: white;
+}

@@ -4,6 +4,7 @@ import PaginaPrincipal from './components/PaginaPrincipal';
 import Reportes from './components/Reportes'; 
 import RegistroAuto from './components/RegistroAuto';
 import RegistroReparaciones from './components/RegistroReparacion';
+import ReporteUno from './components/Reporteuno';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<PaginaPrincipal />} />
           <Route path="/reportes" element={<Reportes />} />  
+          <Route path="/report1" element={<ReporteUno/>} />
           <Route path="/registro-auto" element={<RegistroAuto />} />
           <Route path="/registro-reparacion" element={<RegistroReparaciones />} />    
         </Routes>

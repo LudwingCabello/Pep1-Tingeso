@@ -26,7 +26,9 @@ public class ReporteUnoService {
 
     public ReporteUnoEntity getReporteById(int id) {return  reporteUnoRepository.findById(id);}
 
-    public ReporteUnoEntity getVehiculo(String patente) {return  reporteUnoRepository.findByPatente(patente);}
+    public ReporteUnoEntity getReporteUno(String patente) {return  reporteUnoRepository.findByPatente(patente);}
+
+    public ArrayList<ReporteUnoEntity> getReportesUno(String patente) {return (ArrayList<ReporteUnoEntity>) reporteUnoRepository.findAllByPatente(patente);}
 
     public ReporteUnoEntity saveReporte(ReporteUnoEntity reporteUno) {return reporteUnoRepository.save(reporteUno);}
 
@@ -451,6 +453,7 @@ public class ReporteUnoService {
         int valorTotalRecargos = 0;
         int valorTotalDescuentos = 0;
         int valorTotal = 0;
+        double iva = 0.19;
         for (int i=0 ; i<largo ; i++) {
             int GastoReparaciones = CosteReparacion(auto.getMotor(), historial.get(i).getReparaciones());
             //agregar funcionalidad de descuentoXreparacion
@@ -474,6 +477,8 @@ public class ReporteUnoService {
             double recargoXRetraso = RecargoXRetraso(historial.get(i).getFechaHoraSalida(), historial.get(i).getFechaHoraRetiro());
             int valorRecargoXRetraso = (int) (valorConDescuentos * recargoXRetraso);
 
+            int valorIVA = (int) (valorConDescuentos * iva);
+
             String boleta= "Valor Reparaciones =" + GastoReparaciones + "|" + "Descuento por reparaciones =" + valorDescuentoXReparacion + "|" + "Descuento por dia = " + valorDescuentoXDia + "|" + "Recargo por Km = " + valorRecargoXKm + "|" + "Recargo por antiguedad =" + valorRecargoXAntiguedad +"|" + "Rceargo por retraso" + valorRecargoXRetraso + "|" + "Precio a pagar = " + valorTotal + "|";
 
             //Añado el string con los datos de la boleta
@@ -481,7 +486,7 @@ public class ReporteUnoService {
             gastoTotalReparaciones = gastoTotalReparaciones + GastoReparaciones;
             valorTotalDescuentos = valorConDescuentos + (valorDescuentoXReparacion + valorDescuentoXDia);
             valorTotalRecargos = valorTotalRecargos + (valorRecargoXKm + valorRecargoXAntiguedad + valorRecargoXRetraso);
-            valorTotal = valorTotal + valorTotalDescuentos + (valorRecargoXKm + valorRecargoXAntiguedad + valorRecargoXRetraso);
+            valorTotal = valorTotal + valorTotalDescuentos + (valorRecargoXKm + valorRecargoXAntiguedad + valorRecargoXRetraso + valorIVA);
 
         }
 
@@ -499,4 +504,6 @@ public class ReporteUnoService {
 
         return reporteUnoEntity;
     }
+
+
 }
