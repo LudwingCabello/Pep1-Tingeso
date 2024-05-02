@@ -9,7 +9,7 @@ export default function ReporteUno() {
     async function handleCrearReporteUno(e){
       e.preventDefault();
       try{
-          const response = await autoService.ReporteUno(patente);
+          const response = await vehiculoService.ReporteUno(patente);
           setReporteUno(response.data);
           setPatente("");
           alert("Reporte Uno generado ");

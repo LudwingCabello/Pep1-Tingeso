@@ -9,8 +9,6 @@ function CrearVehiculo(vehiculo) {
     return axios.post(`${VEHICULOS_URL}/savevehiculo`, vehiculo);
   }
 
-
-
 function RegistroReparaciones(reparacion){
     return axios.post(`${HISTORIAL_URL}/savehistorial`, reparacion);
 }
@@ -20,4 +18,4 @@ function ReporteUno(patente){
   return axios.get(`${REPORTEUNO_URL}/${patente}`);
 }
 
-export default {CrearVehiculo, RegistroReparaciones}
+export default {CrearVehiculo, RegistroReparaciones, ReporteUno}
