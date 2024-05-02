@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const VEHICULOS_URL = "http://localhost:80/vehiculos";
-const HISTORIAL_URL = "http://localhost:80/HistorialReparaciones";
+const VEHICULOS_URL = "http://pep1tingesoludwingc.brazilsouth.cloudapp.azure.com/vehiculos";
+const HISTORIAL_URL = "http://pep1tingesoludwingc.brazilsouth.cloudapp.azure.com/HistorialReparaciones";
 
 function CrearVehiculo(vehiculo) {
     console.log("Saving vehicle:", vehiculo);
