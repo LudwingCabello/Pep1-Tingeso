@@ -486,7 +486,7 @@ public class ReporteUnoService {
             gastoTotalReparaciones = gastoTotalReparaciones + GastoReparaciones;
             valorTotalDescuentos = valorTotalDescuentos + (valorDescuentoXReparacion + valorDescuentoXDia);
             valorTotalRecargos = valorTotalRecargos + (valorRecargoXKm + valorRecargoXAntiguedad + valorRecargoXRetraso);
-            valorTotal = valorTotal - valorTotalDescuentos + (valorRecargoXKm + valorRecargoXAntiguedad + valorRecargoXRetraso + valorIVA);
+            valorTotal = valorTotal + gastoTotalReparaciones - valorTotalDescuentos + (valorRecargoXKm + valorRecargoXAntiguedad + valorRecargoXRetraso + valorIVA);
 
         }
 
