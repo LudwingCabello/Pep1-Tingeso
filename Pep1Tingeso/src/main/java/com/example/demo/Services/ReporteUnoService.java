@@ -485,7 +485,7 @@ public class ReporteUnoService {
             boletas.add(boleta);
             gastoTotalReparaciones = gastoTotalReparaciones + GastoReparaciones;
             valorTotalDescuentos = valorTotalDescuentos + (valorDescuentoXReparacion + valorDescuentoXDia);
-            valorTotalRecargos = valorTotalRecargos + (valorRecargoXKm + valorRecargoXAntiguedad + valorRecargoXRetraso);
+            valorTotalRecargos = valorTotalRecargos + (valorRecargoXKm + valorRecargoXAntiguedad + valorRecargoXRetraso + valorIVA);
             valorTotal = valorTotal + gastoTotalReparaciones - valorTotalDescuentos + (valorRecargoXKm + valorRecargoXAntiguedad + valorRecargoXRetraso + valorIVA);
 
         }
