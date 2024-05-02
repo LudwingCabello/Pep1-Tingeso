@@ -8,7 +8,7 @@ const PaginaPrincipal = () => {
       <h1>AutoFix - Sistema de Gestión de Reparaciones</h1>
       <div className="acciones-menu">
         <Link to="/registro-auto">
-          <button className="btn-accion">Registro de Auto</button>
+          <button className="btn-accion">Registro de Vehiculos</button>
         </Link>
         <Link to="/registro-reparacion">
           <button className="btn-accion">Registro de Reparaciones</button>
