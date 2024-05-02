@@ -46,7 +46,7 @@ export default function ReporteUno() {
                 <p>Valor Total: {reporteuno.valorTotal} </p>
                 <p>Valor Reparaciones: {reporteuno.costo_reparaciones} </p>
                 <p>Valor Descuentos: {reporteuno.descuentos} </p>
-                <p>Valor Descuentos: {reporteuno.recargos} </p>
+                <p>Valor Recargos: {reporteuno.recargos} </p>
             </div>
         )}
     </div>

@@ -484,9 +484,9 @@ public class ReporteUnoService {
             //Añado el string con los datos de la boleta
             boletas.add(boleta);
             gastoTotalReparaciones = gastoTotalReparaciones + GastoReparaciones;
-            valorTotalDescuentos = valorConDescuentos + (valorDescuentoXReparacion + valorDescuentoXDia);
+            valorTotalDescuentos = valorTotalDescuentos + (valorDescuentoXReparacion + valorDescuentoXDia);
             valorTotalRecargos = valorTotalRecargos + (valorRecargoXKm + valorRecargoXAntiguedad + valorRecargoXRetraso);
-            valorTotal = valorTotal + valorTotalDescuentos + (valorRecargoXKm + valorRecargoXAntiguedad + valorRecargoXRetraso + valorIVA);
+            valorTotal = valorTotal - valorTotalDescuentos + (valorRecargoXKm + valorRecargoXAntiguedad + valorRecargoXRetraso + valorIVA);
 
         }
 
